@@ -1,0 +1,49 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corFundoMain);
+    max-width: 100%;
+}
+
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: green;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 70px;
+    padding: 20px;
+    fill: var(--corLetrasBotoes);
+    /* box-shadow: 0 4px 10px var(--corSombreamento); */
+    transition: background-color 0.8s ease;
+}
+.fixed-button-mobile{
+    position: fixed;
+    bottom: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    background-color: green;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 50px;
+    padding: 12px;
+    fill: var(--corLetrasBotoes);
+    /* box-shadow: 0 4px 10px var(--corSombreamento); */
+    transition: background-color 0.8s ease;
+}
+
+.fixed-button:hover {
+    background-color: rgb(78, 228, 78);
+}
+.fixed-button-mobile:hover {
+    background-color: rgb(78, 228, 78);
+}

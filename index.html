@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Customizável</title>
+    <link rel="stylesheet" href="src/screens/css/config.css">
+    <link rel="stylesheet" href="src/screens/css/mobile.css">
+    <link rel="stylesheet" href="src/screens/css/01_header/header.css">
+    <link rel="stylesheet" href="src/screens/css/02_main/0_main.css">
+    <link rel="stylesheet" href="src/screens/css/02_main/1_apresentacao.css">
+    <link rel="stylesheet" href="src/screens/css/02_main/2_produto.css">
+    <link rel="stylesheet" href="src/screens/css/02_main/3_sobre.css">
+    <link rel="stylesheet" href="src/screens/css/02_main/4_contatos.css">
+    <link rel="stylesheet" href="src/screens/css/03_footer/footer.css">
+</head>
+
+<body>
+    <!-- Cabeçalho customizavel para clientes-->
+    <header>
+
+        <div class="logoDaEmpresa">
+            <a href="#"><img src="..." alt="Logo da empresa..."></a>
+        </div>
+
+        <ol>
+            <li><a href="#apresentacao">Home</a></li>
+            <li><a href="#produto">Produto</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contatos">Contato</a></li>
+        </ol>
+
+    </header>
+    <main>
+
+        <section class="apresentacao" id="apresentacao">
+
+            <h2>Seu produto</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <!-- Slide 1 - Pode ser configuravel -->
+                    <div class="carousel-slide">
+
+                        <h3>Descrição da caracteristica</h3>
+                        <p>Descrição dessa caracteristica: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam deserunt tempora provident officia quas quos, ad dicta omnis molestias tempore eum dolorem quam dolorum et fugit excepturi ut magnam!</p>
+                        <img src="https://via.placeholder.com/600x500" alt="sem internet...">
+                    </div>
+
+                    <!-- Slide 2 - Pode ser configuravel -->
+                    <div class="carousel-slide">
+                        <h3>Descrição da caracteristica</h3>
+                        <p>Descrição dessa caracteristica: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam deserunt tempora provident officia quas quos, ad dicta omnis molestias tempore eum dolorem quam dolorum et fugit excepturi ut magnam!</p>
+                        <img src="https://via.placeholder.com/600x500" alt="sem internet...">
+                    </div>
+
+                    <!-- Slide 3 - Pode ser configuravel -->
+                    <div class="carousel-slide">
+                        <h3>Descrição da caracteristica</h3>
+                        <p>Descrição dessa caracteristica: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam deserunt tempora provident officia quas quos, ad dicta omnis molestias tempore eum dolorem quam dolorum et fugit excepturi ut magnam!</p>
+                        <img src="https://via.placeholder.com/600x500" alt="sem internet...">
+                    </div>
+                </div>
+
+                <!-- Botões de navegação do carrossel -->
+                <div class="carousel-buttons">
+                    <button id="prevBtn">&#10094;</button>
+                    <button id="nextBtn">&#10095;</button>
+                </div>
+
+                <!-- Pontos indicativos do slide atual -->
+                <div class="carousel-dots" id="carouselDots">
+                    <span class="active" data-slide="0"></span>
+                    <span data-slide="1"></span>
+                    <span data-slide="2"></span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="produto" id="produto">
+            <h2>Produto em Destaque</h2>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Seu produto</h1>
+                    <p>Descrição em poucas palavras sobre seu produto</p>
+                    <button onclick="scrollToDetails()">Saiba Mais</button>
+                </div>
+            </section>
+
+            <section class="product-description" id="details">
+                <h2>Sobre o Produto</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus quaerat unde neque maiores labore, esse ipsa veniam explicabo dolorem facilis consectetur laborum dolores soluta velit sunt distinctio libero animi dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dicta autem, fugiat explicabo assumenda ex provident quam deserunt corrupti, unde numquam molestiae, adipisci consequatur! Sunt obcaecati voluptatum quidem temporibus minima?</p>
+            </section>
+
+            <section class="product-details">
+                <div class="details-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Sem internet...">
+                    <h3>Caracteristica</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit sequi ducimus, non voluptas unde velit, iure dolor, amet rem consectetur illum possimus mollitia impedit blanditiis beatae? Tenetur quasi aspernatur perspiciatis.</p>
+                </div>
+                <div class="details-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Sem internet...">
+                    <h3>Caracteristica</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit sequi ducimus, non voluptas unde velit, iure dolor, amet rem consectetur illum possimus mollitia impedit blanditiis beatae? Tenetur quasi aspernatur perspiciatis.</p>
+                </div>
+            </section>
+        </section>
+
+
+        <section class="sobre" id="sobre">
+
+            <h2>Sobre o Criador</h2>
+            <hr>
+            <div class="history-container">
+                <!-- <h2>Conheça o Criador</h2> -->
+                <div class="history-content">
+                    <div class="history-text">
+                        <p>
+                            O fundado(@), <strong>Seu Nome</strong>, sempre foi apaixonada por moda e beleza. Após
+                            anos trabalhando na indústria cosmética, Ana percebeu uma necessidade no mercado: um batom
+                            que fosse ao mesmo tempo vibrante, duradouro e confortável. Assim nasceu a ideia de criar o
+                            <strong>Batom Vermelho Duradouro</strong>, um produto que reflete sua visão de empoderamento
+                            e elegância.
+                        </p>
+                        <p>
+                            A inspiração veio de suas próprias experiências. Como mulher moderna, Ana sentia a
+                            dificuldade de encontrar um batom que durasse o dia todo, sem perder o conforto. Ela decidiu
+                            então criar uma linha de produtos que atendesse às expectativas das mulheres dinâmicas, que
+                            precisam de confiança em sua maquiagem, independente da ocasião.
+                        </p>
+                        <p>
+                            A loja <strong>Sua loja</strong> foi lançada com a missão de oferecer produtos de alta
+                            qualidade, feitos com carinho e atenção aos detalhes. Cada batom é resultado de pesquisa
+                            intensa, testes rigorosos e um compromisso com a satisfação de suas clientes. O
+                            <strong>Seu produto</strong> rapidamente se tornou um sucesso entre as mulheres
+                            que procuram elegância e praticidade em um só produto.
+                        </p>
+                        <p>
+                            Texto meramente ilustrativo*
+                        </p>
+                    </div>
+                    <div class="history-image">
+                        <img src="https://via.placeholder.com/500x500" alt="Sua foto">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="contatos" id="contatos">
+            <h2>Contato</h2>
+            <hr>
+            <div class="links-redes-sociais">
+
+                
+                <div class="card">
+                    <a class="socialContainer containerOne" href="https://www.instagram.com/" target="_blank">
+                        <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a class="socialContainer containerTwo" href="https://x.com/" target="_blank">
+                        <svg viewBox="0 0 16 16" class="socialSvg twitterSvg">
+                            <path
+                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a class="socialContainer containerFour" href="https://web.whatsapp.com/" target="_blank">
+                        <svg viewBox="0 0 16 16" class="socialSvg whatsappSvg">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="testbox">
+                <form action="/">
+                    <p id="h1">Formulario de Feedback</p>
+                    <p id="h4">Nome</p>
+                    <input placeholder="Digite seu Nome " type="text" class="input">
+                    <p id="h4">Email<span>*</span></p>
+                    <input placeholder="Digite seu email" type="text" class="input" required>
+                    <p id="h4">O quão satisfeito você está?<span>*</span></p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="first-col"></th>
+                                <th>Muito satisfeito</th>
+                                <th>Satisfeito</th>
+                                <th>Insatisfeito</th>
+                                <th>Decepcionado</th>
+                            </tr>
+                            <tr>
+                                <td class="first-col">Profissional</td>
+                                <td><input name="point#2" value="none" type="radio"></td>
+                                <td><input name="point#2" value="none" type="radio"></td>
+                                <td><input name="point#2" value="none" type="radio"></td>
+                                <td><input name="point#2" value="none" type="radio"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="h4">Deixe aqui sua sugestão gratuita de melhoria:</p>
+                    <textarea rows="5" placeholder="Deixe aqui sua sugestão"></textarea>
+                    <div class="btn-block">
+                        <button href="/" type="submit">Send Feedback</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <button class="fixed-button" onclick="alert('Adicionado ao carrinho!')"><svg viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+            </path>
+        </svg></button>
+        <button class="fixed-button-mobile" onclick="alert('Adicionado ao carrinho!')"><svg viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+            </path>
+        </svg></button>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#apresentacao">Home</a></li>
+                    <li><a href="#produto">Produto</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contatos">Contato</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h4>Siga-nos:</h4>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="https://via.placeholder.com/30x30" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="https://via.placeholder.com/30x30" alt="Facebook">
+                </a>
+                <a href="https://x.com/" target="_blank">
+                    <img src="https://via.placeholder.com/30x30" alt="Twitter">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="https://via.placeholder.com/30x30" alt="YouTube">
+                </a>
+            </div>
+    
+            <div class="footer-newsletter">
+                <h4>Inscreva-se em nossa newsletter:</h4>
+                <form action="#">
+                    <input class="input_footer" type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Guto oliveira. Todos os direitos reservados.</p>
+            <p>Design por <a href="https://github.com/Guts-01" target="_blank">Guto</a></p>
+        </div>
+    </footer>
+    <script src="src/screens/javascript/scripts.js"></script>
+</body>
+
+</html>

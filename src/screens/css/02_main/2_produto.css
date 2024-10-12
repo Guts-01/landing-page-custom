@@ -1,0 +1,118 @@
+.produto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5%;
+    max-width: 100%;
+}
+.produto h2{
+    font-size: 2.5rem;
+    color: var(--corTituloMain);
+    margin-bottom: 30px;
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1200x600'); /* Imagem de destaque do produto */
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(-corParagrafoMain);
+}
+
+.hero-content {
+    background-color:var(--corFundoCards);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--corTituloMain);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-content button {
+    background-color: var(--corBotoes);
+    color: var(--corLetrasBotoes);
+    border: none;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+}
+
+.hero-content button:hover {
+    background-color: var(--corBotoesHover);
+}
+
+/* Seção de Descrição */
+.product-description {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.product-description h2 {
+    font-size: 2.5rem;
+    color: var(--corTituloMain);
+    margin-bottom: 30px;
+}
+
+.product-description p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--corParagrafoMain);
+    line-height: 1.6;
+    width: 800px;
+}
+
+/* Seção de Detalhes */
+.product-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.details-item {
+    flex-basis: 45%;
+    margin: 20px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--corSombreamento); 
+}
+
+.details-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.details-item h3 {
+    font-size: 1.8rem;
+    color: var(--corTituloMain);
+    margin-bottom: 15px;
+}
+
+.details-item p {
+    font-size: 1.1rem;
+    color: var(--corParagrafoMain);
+    line-height: 1.6;
+}
+
+
+

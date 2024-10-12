@@ -1,0 +1,36 @@
+header{
+    align-items: center;
+    background-color: var(--corFundoHeader);
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 10px;
+}
+
+header .logoDaEmpresa{
+    width: 100px;
+    background-color: antiquewhite;
+}
+
+header ol{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    justify-content: center;
+    list-style: none;
+    margin: 10%;
+}
+
+header ol li a{
+    color: var(--corLetrasHeader);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: 0.8s;
+}
+
+header ol li a:hover{
+    color: var(--corHoverLetrasLinks);
+}
+

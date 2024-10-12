@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body h1,
+h2 {
+    font-family: var(--fonteTitulos);
+}
+
+body h3,
+h4 {
+    font-family: var(--fonteSubTitulos);
+}
+
+body a,
+p {
+    font-family: var(--fonteParagrafos);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    /* Variaveis de Configurações Globais */
+
+    --fonteParagrafos: sans-serif;
+    --fonteTitulos: sans-serif;
+    --fonteSubTitulos: sans-serif;
+    --corHoverLetrasLinks: #ff7b00;
+    --corBotoes: #ff7b00;
+    --corLetrasBotoes: #ffffff;
+    --corBotoesHover: #683700;
+    --corFundoCards: #ffffffe8;
+    --corSombreamento: #000000;
+
+    /* Cores customizável do Cabeçalho abaixo */
+    --corFundoHeader: #ffffffe8;
+    --corLetrasHeader: #000000;
+    /* Cores customizável do Main abaixo */
+    /* =========== CORES ================ */
+    --corFundoMain: #ffffff;
+    --corTituloMain: #ff7b00;
+    --corSubTituloMain: #ff7b00;
+    --corParagrafoMain: #000000;
+    /* Cores customizável do footer abaixo */
+    --corFundoFooter: #ffffffe8;
+    --corLetrasFooter: #000000;
+
+}
