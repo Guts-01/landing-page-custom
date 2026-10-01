@@ -1,76 +1,62 @@
-// ==========================================================================
-//                    CARROSSEL DE IMAGENS
-// ==========================================================================
+const root = document.documentElement;
+const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = themeToggle.querySelector('.theme-icon');
+const themeLabel = themeToggle.querySelector('.theme-label');
+const themeColor = document.querySelector('meta[name="theme-color"]');
+const colorPreference = window.matchMedia('(prefers-color-scheme: dark)');
+const storageKey = 'lume-theme';
 
-const carousel = document.getElementById('carousel');
-const dots = document.querySelectorAll('.carousel-dots span');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-let currentSlide = 0;
-
-// Função para mostrar o slide
-function showSlide(slideIndex) {
-    const totalSlides = document.querySelectorAll('.carousel-slide').length;
-    if (slideIndex >= totalSlides) {
-        currentSlide = 0;
-    } else if (slideIndex < 0) {
-        currentSlide = totalSlides - 1;
-    } else {
-        currentSlide = slideIndex;
-    }
-    const offset = currentSlide * -100;
-    carousel.style.transform = `translateX(${offset}%)`;
-    
-    // Atualiza os pontos indicativos
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentSlide].classList.add('active');
+function readSavedTheme() {
+  try {
+    return localStorage.getItem(storageKey);
+  } catch {
+    return null;
+  }
 }
 
-// Eventos dos botões
-nextBtn.addEventListener('click', () => {
-    showSlide(currentSlide + 1);
-});
-
-prevBtn.addEventListener('click', () => {
-    showSlide(currentSlide - 1);
-});
-
-//  Evento dos pontos indicativos
-dots.forEach(dot => {
-    dot.addEventListener('click', (event) => {
-        const slideIndex = parseInt(event.target.getAttribute('data-slide'));
-        showSlide(slideIndex);
-    });
-});
-
-// Troca automática de slides a cada 5 segundos
-setInterval(() => {
-        showSlide(currentSlide + 1);
-    }, 5000);
-    
-// OBS: Retirado, mas pode ser ativado conforme a necessidade
-
-// ==========================================================================
-//                           PRODUTO  
-// ==========================================================================
-
-function scrollToDetails() {
-    document.getElementById('details').scrollIntoView({ behavior: 'smooth' });
+function saveTheme(theme) {
+  try {
+    localStorage.setItem(storageKey, theme);
+  } catch {
+    // O botão continua funcionando quando o armazenamento está indisponível.
+  }
 }
 
-// ==========================================================================
-//                           SOBRE O CRIADOR  
-// ==========================================================================
+function applyTheme(theme) {
+  const isDark = theme === 'dark';
+  root.dataset.theme = theme;
+  themeToggle.setAttribute('aria-label', isDark ? 'Ativar tema claro' : 'Ativar tema escuro');
+  themeIcon.textContent = isDark ? '☀' : '☾';
+  themeLabel.textContent = isDark ? 'Tema claro' : 'Tema escuro';
+  themeColor.content = isDark ? '#171615' : '#fffaf4';
+}
 
-document.addEventListener('DOMContentLoaded', function () {
-    const elements = document.querySelectorAll('.history-text p');
-    elements.forEach((el) => {
-        el.addEventListener('mouseenter', () => {
-            el.style.color = 'var(--corBotoesHover)';
-            el.style.transition = 'color 0.3s ease';
-        });
-        el.addEventListener('mouseleave', () => {
-            el.style.color = '#333';
-        });
-    });
+const savedTheme = readSavedTheme();
+const systemTheme = colorPreference.matches ? 'dark' : 'light';
+applyTheme(savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : systemTheme);
+
+themeToggle.addEventListener('click', () => {
+  const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyTheme(nextTheme);
+  saveTheme(nextTheme);
+});
+
+colorPreference.addEventListener('change', (event) => {
+  if (!readSavedTheme()) applyTheme(event.matches ? 'dark' : 'light');
+});
+
+document.querySelector('#current-year').textContent = new Date().getFullYear();
+
+document.querySelector('#contact-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const fields = new FormData(form);
+  const name = String(fields.get('name')).trim();
+  const email = String(fields.get('email')).trim();
+  const message = String(fields.get('message')).trim();
+  const subject = encodeURIComponent('Contato pelo site Lume');
+  const body = encodeURIComponent(`Nome: ${name}\nE-mail: ${email}\n\n${message}`);
+
+  window.location.href = `mailto:${form.dataset.contactEmail}?subject=${subject}&body=${body}`;
 });
